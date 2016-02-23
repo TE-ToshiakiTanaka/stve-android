@@ -14,8 +14,8 @@ dependencies:
         - pip install -U ipdb
         - pip install -U -r requirements.txt
         - pyenv local $TOX_PY27
-        - echo y | android update sdk --no-ui --all --filter tool, extra-android-m2repository, extra-android-support, extra-google-google_play_services, extra-google-m2repository, android-23
-        - echo y | android update sdk --no-ui --all --filter build-tools-23.0.2
+        - echo y | android update sdk --no-ui --all --filter "tool,extra-android-m2repository,extra-android-support,extra-google-google_play_services,extra-google-m2repository,android-23"
+        - echo y | android update sdk --no-ui --all --filter "build-tools-23.0.2"
 
 test:
     override:
