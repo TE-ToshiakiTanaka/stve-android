@@ -23,7 +23,7 @@ test:
             background: true
             parallel: true
         - circle-android wait-for-boot
-        - adb devices
+        - adb -s emurator-5554 shell dumpsys power
         - tox -v
     post:
         - mkdir -p $CIRCLE_TEST_REPORTS/nose/
